@@ -1,9 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
 using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 using Moq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using People.Model.Config;
@@ -56,42 +53,7 @@ namespace PeopleTest.Service
 
         }
 
-        //[TestMethod]
-        //public void TestSavePerson()
-        //{
-        //    var mockSet = new Mock<DbSet<Person>>();
-        //    var mockSet2 = new Mock<DbSet<Interest>>();
-        //    var data = new List<Interest>
-        //    {
-        //        new Interest
-        //        {Id = 1, Description = "Basketball"},
-        //        new Interest
-        //        {Id = 2, Description = "Skiing"},
-        //        new Interest
-        //        {Id = 3, Description = "Painting"},
-        //        new Interest
-        //        {Id = 4, Description = "Fitness"},
-        //        new Interest
-        //        {Id = 5, Description = "Cooking"}
-        //    }.AsQueryable();
-
-            //    mockSet2.As<IQueryable<Interest>>().Setup(m => m.Provider).Returns(data.Provider);
-            //    mockSet2.As<IQueryable<Interest>>().Setup(m => m.Expression).Returns(data.Expression);
-            //    mockSet2.As<IQueryable<Interest>>().Setup(m => m.ElementType).Returns(data.ElementType);
-            //    mockSet2.As<IQueryable<Interest>>().Setup(m => m.GetEnumerator()).Returns(data.GetEnumerator());
-
-            //var mockContext = new Mock<PersonDbContext>();
-            //    mockContext.Setup(c => c.Interests).Returns(mockSet2.Object);
-            //    mockContext.Setup(m => m.Persons).Returns(mockSet.Object);
-
-            //    var service = new PersonRepository(mockContext.Object);
-            //    service.SavePerson("Robert","Harris",21, new HashSet<int>() {1, 2}, "image2.jpg");
-
-            //    mockSet.Verify(m => m.Add(It.IsAny<Person>()), Times.Once());
-            //    mockContext.Verify(m => m.SaveChanges(), Times.Once());
-            //}
-
-        }
+    }
 
 }
 

@@ -16,7 +16,7 @@ namespace PeopleSearch.Web
             // it is NOT necessary to register your controllers
 
             // e.g. container.RegisterType<ITestService, TestService>();
-            container.RegisterType<PersonDbContext>(new PerResolveLifetimeManager());
+            container.RegisterType<PersonDbContext>(new HierarchicalLifetimeManager());
             container.RegisterType<IPersonService, PersonService>();
             container.RegisterType<IInterestService, InterestService>();
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
